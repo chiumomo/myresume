@@ -44,7 +44,7 @@ let Data = [
             {
                 id:'FrontEnd/03',
                 photo:'FrontEnd3',
-                p1:"Designer：UNIQLO",
+                p1:"Designer：學米導師範例",
                 p2:"Front-end：Cmomo",
                 intro:"Project Intro：pratice",
                 link:"https://l6oytw.csb.app/#South"

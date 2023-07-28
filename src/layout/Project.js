@@ -7,7 +7,7 @@ import Data from "../data";
 import UIUXCard from "./CardUIUX";
 import FrontEndCard from "./CardFrontEnd";
 import StickerCard from "./CardSticker";
-import { Link, Route, Routes } from "react-router-dom";
+import { Link, Route, Routes,useLocation } from "react-router-dom";
 
 
 
@@ -51,9 +51,8 @@ const Span = styled.div`
 const SortButton = styled.div`
         text-align: center;
         font-size: 1rem;
-        color: #FFF1BF;
+        color: ${(props) => (props.isCurrentPath ? '#4fffCC' : '#FFF1BF')} ;
         text-decoration: none;
-        /* width: 10vw; */
         display: inline-block;
         white-space: nowrap;
         padding: .5rem 1rem;
@@ -64,21 +63,36 @@ const SortButton = styled.div`
         &:active{
             color: #ffff;
             text-shadow:5px 5px 5px rgba(0,0,0,.8) ;
-
+        }
+        &::after{
+            display:${(props) => (props.isCurrentPath ? 'block' : 'none')};
+            content: "";
+            width: 140%;
+            height: 2px;
+            background-color: #4fffCC;
+            transform: translate(-16%,.5rem);
+            
+            @media screen and (min-width: 769px){
+                height: 4px;
+            }
         }
         
 `
 
+
+
 const Project = ()=>{
+    const location = useLocation();
     return(
         <div id="projects"  >
             <Title >Projects</Title>
             <ProjectContainer>
                 <ProjectNav>
                     {Data.map((sort,key)=>{
+                        const isCurrentPath = location.pathname === `/${sort.id}`;
                         return(
-                            <Link to={`/${sort.id}`}>
-                                <SortButton>
+                            <Link to={`/${sort.id}`}> 
+                                <SortButton  isCurrentPath={isCurrentPath}>
                                     {sort.id}
                                 </SortButton>
                             </Link>
