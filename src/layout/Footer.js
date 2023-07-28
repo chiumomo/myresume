@@ -1,20 +1,22 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import styled from "styled-components";
 import { Container } from "../components/Container";
 
 const FooterContainer = styled(Container)`
     display: block;
+    text-align: center;
+    background-color: #000;
+    color: #fbfbfb;
+    font-size: .7rem;
+    line-height: 1.5rem;
 `
 
 const Footer = ()=>{
     return(
         <div>
-            <FooterContainer style={{backgroundColor:'#c00'}}>
-                <div>This is Footer </div>
+            <FooterContainer>
+                <div>Copyright © 2023 Cmomo.TW                </div>
                
-                {/* <FontAwesomeIcon icon="fa-brands fa-square-github" /> */}
-                {/* <FontAwesomeIcon icon="fa-brands fa-square-behance" /> */}
             </FooterContainer>
         </div>
     )

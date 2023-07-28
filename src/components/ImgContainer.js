@@ -20,12 +20,20 @@ export const ImgContainer = styled(Container)`
         &:hover::before{
             border: solid 1px rgba(0,255,255,.8);
             box-shadow: 0 0 4px 3px  rgba(100,255,255,.5)  ;
+            scale: 1.05;
         }
 `
 
-export const ImgContainer_65 = styled(ImgContainer)`
+export const ImgContainer_50 = styled(ImgContainer)`
         &::before{
-            padding-top: 65%;
+            padding-top: 50%;
+        }
+
+`
+
+export const ImgContainer_60 = styled(ImgContainer)`
+        &::before{
+            padding-top: 60%;
         }
 
 `

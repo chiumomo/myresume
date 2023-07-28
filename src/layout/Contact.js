@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "../components/Container";
 import styled from 'styled-components';
 import { Title } from "../components/Title";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
 const ContactContainer = styled(Container)`
@@ -17,7 +18,6 @@ const Contact = ()=>{
         <div id="contact">
             <Title>Contacts</Title>
             <ContactContainer>
-
 
             </ContactContainer>     
         </div>

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { Title } from "../components/Title";
 import Leaf from "../image/leaf.png" 
 import MovingLeaf from "../components/MovingLeaf";
+import { ImgContainer } from "../components/ImgContainer";
 
 const SkillContainer = styled(Container)`
     margin: 0 100px ;
@@ -43,6 +44,8 @@ const SkillLeaf=styled.div`
 
 const MovingLeafR = styled(MovingLeaf)`
     animation-name:movingR;
+    animation-duration: 15s;
+
     @keyframes movingR {
     0% {
     rotate: -50deg;
@@ -95,7 +98,11 @@ const Skill =()=>{
                 Main tools
             </Title>
             <SkillContainer>
-                React,Figma放圖
+                
+                <ImgContainer url={"../image/sass2.png"}>
+                React,Figma,scss,html5,javascript
+
+                </ImgContainer>
             </SkillContainer>
         </div>
     )

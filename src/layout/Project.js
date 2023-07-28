@@ -2,14 +2,19 @@ import React from "react";
 import { Container } from "../components/Container";
 import styled from 'styled-components';
 import { Title } from "../components/Title";
-import ProjectCard from "../components/Card";
-import Link from "antd/es/typography/Link";
+import Cards from "./Card";
 import Data from "../data";
+import UIUXCard from "./CardUIUX";
+import FrontEndCard from "./CardFrontEnd";
+import StickerCard from "./CardSticker";
+import { Link, Route, Routes } from "react-router-dom";
+
 
 
 
 
 const ProjectContainer = styled(Container)`
+    display: block;
     justify-content: center;
     border-radius: 100px;
     border:solid 4px black;
@@ -29,26 +34,37 @@ const ProjectContainer = styled(Container)`
     }
 `
 
-const ProjectNavBar = styled.div`
-    display: inline-block;
-    justify-content: space-between;
+const ProjectNav = styled(Link)`
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    text-align: center;
+    line-height: 2rem;
     `
+const Span = styled.div`
+        display: block;
+        margin-bottom: 2rem;    
+        width: 100%;
+        height: 2px;
+        background-color: rgba(255,255,255,.7);
+`
 const SortButton = styled.div`
         text-align: center;
-        padding: 0;
         font-size: 1rem;
         color: #FFF1BF;
         text-decoration: none;
-        width: 14vw;
-        /* display: inline; */
+        /* width: 10vw; */
+        display: inline-block;
         white-space: nowrap;
-        padding: 1rem 1rem;
+        padding: .5rem 1rem;
         &:hover{
-            color: #abbC8D;
+            color: #4fffCC;
+            text-shadow:5px 5px 10px rgba(0,0,0,.5) ;
         }
         &:active{
-            color: #CEEBDB;
-            text-decoration:underline;
+            color: #ffff;
+            text-shadow:5px 5px 5px rgba(0,0,0,.8) ;
+
         }
         
 `
@@ -58,18 +74,28 @@ const Project = ()=>{
         <div id="projects"  >
             <Title >Projects</Title>
             <ProjectContainer>
-                {Data.map((sort,key)=>{
-                    return(
-                        <ProjectNavBar>
-                                <Link >
-                                    <SortButton>
-                                        {sort.id}
-                                    </SortButton>
-                                </Link>
-                        </ProjectNavBar>
-                    )
-                })}
-                <ProjectCard/>
+                <ProjectNav>
+                    {Data.map((sort,key)=>{
+                        return(
+                            <Link to={`/${sort.id}`}>
+                                <SortButton>
+                                    {sort.id}
+                                </SortButton>
+                            </Link>
+                        )
+                    })}
+                </ProjectNav>
+                <Span/>
+                <Routes>
+                    <Route exact path="/" element={<Cards/>}>
+                    </Route>
+                    <Route path="/UIUX" element={<UIUXCard/>}>
+                    </Route>
+                    <Route path="/FrontEnd" element={<FrontEndCard/>}>
+                    </Route>
+                    <Route path="/Sticker" element={<StickerCard/>}>
+                    </Route>
+                </Routes>
             </ProjectContainer>
 
         </div>

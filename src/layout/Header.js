@@ -12,7 +12,6 @@ const HeaderContainer = styled(Container)`
     background-position:center;
     background-image: url(${bgHeader}) ;
     background-size: cover;
-    margin-top:-40px;
 `
 export const Navigation =styled.div`
     position: fixed ;
@@ -27,7 +26,6 @@ export const Navigation =styled.div`
         display: flex;
         list-style-type: none;
         justify-content: space-between;
-        
         li{
             color: #FFF1BF;
             &:hover{
