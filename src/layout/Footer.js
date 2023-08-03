@@ -5,7 +5,7 @@ import { Container } from "../components/Container";
 const FooterContainer = styled(Container)`
     display: block;
     text-align: center;
-    background-color: #000;
+    background-color: #8B8C8D;
     color: #fbfbfb;
     font-size: .7rem;
     line-height: 1.5rem;
@@ -14,9 +14,9 @@ const FooterContainer = styled(Container)`
 const Footer = ()=>{
     return(
         <div>
+            
             <FooterContainer>
-                <div>Copyright © 2023 Cmomo.TW                </div>
-               
+                <div>Copyright © 2023 Cmomo.TW</div>
             </FooterContainer>
         </div>
     )

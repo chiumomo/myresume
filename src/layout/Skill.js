@@ -4,43 +4,79 @@ import styled from 'styled-components';
 import { Title } from "../components/Title";
 import Leaf from "../image/leaf.png" 
 import MovingLeaf from "../components/MovingLeaf";
-import { ImgContainer } from "../components/ImgContainer";
+import { ImageContainer } from "../components/ImgContainer";
+
+import htmlLogo from "../image/html-logo.png";
+
+import reactLogo from "../image/react-logo2.png";
+import jsLogo from "../image/Javascript-logo-basico.png";
+import cssLogo from "../image/css-logo.png";
+import scssLogo from "../image/sass.png";
+import figmaLogo from "../image/figma-logo.png";
+
+const Logo = [htmlLogo,cssLogo,jsLogo,scssLogo,reactLogo,figmaLogo];
 
 const SkillContainer = styled(Container)`
-    margin: 0 100px ;
+    margin: 0 70px ;
     color: #056464;
     margin-bottom: 200px;
-`
+    @media screen and (min-width:660px){
+        margin: 0 20px ;
+        margin-bottom: 200px;
 
+    }
+    @media screen and (min-width:1200px){
+        margin: 0 50px ;
+        margin-bottom: 300px;
+    }
+`
     
 const SkillsValue =styled.div`
-display: block;
-margin-bottom: 4rem;
-
+    display: block;
+    margin-bottom: 4rem;
 `
 
 const SkillName=styled.div`
     display: inline-block;
-    width: 300px;
-    font-size: 36px;
-    margin-right: 4rem;
+    width: 6rem;
+    font-size: 1.5rem;
+    margin-right: 2rem;
     font-family: 'Noto Sans TC';
-    text-align: right;
+    text-align: left;
+    width: 100%;
+    @media screen and (min-width:660px){
+        width:  7rem;
+        text-align: right;
+    }
+    @media screen and (min-width:1200px){
+        width: 10rem;
+        margin-right: 2rem;
+        text-align: right;
+
+    }
 `
 const SkillLeaf=styled.div`
     display:inline-block;
-    width: ${(props) => props.wid * 60 }px;
-    padding-top:25px;
-    padding-bottom: 25px;
+    width: ${(props) => props.wid * 37 }px;
+    padding-top:10px;
+    padding-bottom: 20px;
     text-align: left;
     background-image: url(${Leaf});
     background-size: contain;
     background-repeat: space ;
     background-position-x: left;
     transform: translateY(12px);
+    @media screen and (min-width: 640px) {
+        padding-top: 20px;
+        width: ${(props) => props.wid * 50 }px;
+
+    }
+    @media screen and (min-width: 1000px) {
+        padding-top: 30px;
+        width: ${(props) => props.wid * 60 }px;
+
+    }
 `
-
-
 
 const MovingLeafR = styled(MovingLeaf)`
     animation-name:movingR;
@@ -61,7 +97,45 @@ const MovingLeafR = styled(MovingLeaf)`
     }
   }
 `
+const ToolContainer = styled(Container)`
+    margin: 0 60px ;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    box-shadow: 0px 0px 10px rgba(255,255,200,.4);
+    white-space: nowrap;
+    justify-content: space-around;
+    @media screen and (min-width:660px){
+        flex-wrap: wrap;
+        margin: 0 50px ;
+        margin-bottom: 100px;
+    }
+    @media screen and (min-width:1200px){
+        flex-wrap: nowrap;
+        margin: 0 60px ;
+        margin-bottom: 100px;
+    }
+`
 
+const ToolImgContainer = styled(ImageContainer)`
+    margin: 1rem 1rem;
+    width: 30%;
+    /* margin-bottom:2rem; */
+    &::before{
+        padding-top: 50%;
+    }
+    @media screen and (min-width:660px){
+        width: 20%;
+        margin-bottom:2rem;
+    }
+    @media screen and (min-width:1200px){
+        width: 16%;
+        margin-bottom:.5rem;
+
+    }
+/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+`
 
 const Skill =()=>{
 
@@ -97,13 +171,13 @@ const Skill =()=>{
             <Title>
                 Main tools
             </Title>
-            <SkillContainer>
-                
-                <ImgContainer url={"../image/sass2.png"}>
-                React,Figma,scss,html5,javascript
-
-                </ImgContainer>
-            </SkillContainer>
+            <ToolContainer>
+                {Logo.map((logo,idx)=>{
+                    return(
+                        <ToolImgContainer key={idx} url={logo} />
+                    )
+                })}
+            </ToolContainer>
         </div>
     )
 }

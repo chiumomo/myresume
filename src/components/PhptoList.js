@@ -1,5 +1,3 @@
-
-
 import UIUX1 from "../image/UIUXdisney.png"
 import UIUX2 from "../image/UIUXtablegame.png"
 import FrontEnd1 from "../image/frontendStore1.png"

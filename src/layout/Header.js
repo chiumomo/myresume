@@ -28,11 +28,11 @@ export const Navigation =styled.div`
         justify-content: space-between;
         li{
             color: #FFF1BF;
+            white-space: nowrap;
+            padding: 1rem 1rem;
             &:hover{
                 color: #8B8C8D;
             }
-            white-space: nowrap;
-            padding: 1rem 1rem;
             &:active{
                 color: #aee23e;
                 text-decoration:underline;
