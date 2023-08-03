@@ -102,9 +102,10 @@ const ToolContainer = styled(Container)`
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 100px;
-    box-shadow: 0px 0px 10px rgba(255,255,200,.4);
+    box-shadow: 0px 0px 10px rgba(255,255,250,.6);
     white-space: nowrap;
     justify-content: space-around;
+    border-radius: 1rem;
     @media screen and (min-width:660px){
         flex-wrap: wrap;
         margin: 0 50px ;
@@ -120,17 +121,15 @@ const ToolContainer = styled(Container)`
 const ToolImgContainer = styled(ImageContainer)`
     margin: 1rem 1rem;
     width: 30%;
-    /* margin-bottom:2rem; */
     &::before{
         padding-top: 50%;
     }
     @media screen and (min-width:660px){
         width: 20%;
-        margin-bottom:2rem;
+
     }
     @media screen and (min-width:1200px){
         width: 16%;
-        margin-bottom:.5rem;
 
     }
 /* animation: name duration timing-function delay iteration-count direction fill-mode; */
