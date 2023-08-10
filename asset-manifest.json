@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/chiumomo/myresume/static/css/main.fff2e736.css",
+    "main.js": "/chiumomo/myresume/static/js/main.6fcd833d.js",
+    "static/js/787.0e31295a.chunk.js": "/chiumomo/myresume/static/js/787.0e31295a.chunk.js",
+    "static/media/Header.png": "/chiumomo/myresume/static/media/Header.d693b45e908197fa5b3c.png",
+    "static/media/UIUXtablegame.png": "/chiumomo/myresume/static/media/UIUXtablegame.eb7ec55acafe73d70825.png",
+    "static/media/bigleaf.png": "/chiumomo/myresume/static/media/bigleaf.e6399ab5e66eb5cf6af1.png",
+    "static/media/frontendStore2.png": "/chiumomo/myresume/static/media/frontendStore2.39276dc2563ffff62b49.png",
+    "static/media/react-logo2.png": "/chiumomo/myresume/static/media/react-logo2.5e8c147809acd059b5cd.png",
+    "static/media/UIUXdisney.png": "/chiumomo/myresume/static/media/UIUXdisney.9ffdddbe3fc8f5f7b5a5.png",
+    "static/media/Javascript-logo-basico.png": "/chiumomo/myresume/static/media/Javascript-logo-basico.7ed3f8993fe30ef08e9f.png",
+    "static/media/frontendStore1.png": "/chiumomo/myresume/static/media/frontendStore1.1102cee76b4bfabebd4a.png",
+    "static/media/sticker2.png": "/chiumomo/myresume/static/media/sticker2.7397327ba8b3e7e42d42.png",
+    "static/media/sticker3.png": "/chiumomo/myresume/static/media/sticker3.8a9ae8be70e02488d3c0.png",
+    "static/media/sticker1.png": "/chiumomo/myresume/static/media/sticker1.377cb62d4bc8261c2bd3.png",
+    "static/media/css-logo.png": "/chiumomo/myresume/static/media/css-logo.19c8605d6b2861f5fbe0.png",
+    "static/media/frontendStore3.png": "/chiumomo/myresume/static/media/frontendStore3.cb119a13223ca1b42215.png",
+    "static/media/figma-logo.png": "/chiumomo/myresume/static/media/figma-logo.cf1c92d8779a632d2676.png",
+    "static/media/sass.png": "/chiumomo/myresume/static/media/sass.df5a23278bac138d6843.png",
+    "static/media/html-logo.png": "/chiumomo/myresume/static/media/html-logo.f251b6d8bafdfa6bc3a3.png",
+    "index.html": "/chiumomo/myresume/index.html",
+    "main.fff2e736.css.map": "/chiumomo/myresume/static/css/main.fff2e736.css.map",
+    "main.6fcd833d.js.map": "/chiumomo/myresume/static/js/main.6fcd833d.js.map",
+    "787.0e31295a.chunk.js.map": "/chiumomo/myresume/static/js/787.0e31295a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fff2e736.css",
+    "static/js/main.6fcd833d.js"
+  ]
+}
