@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const  CardContainer = styled.div`
 width: 100%;
-white-space: nowrap;
+/* white-space: nowrap; */
 position: relative;
 `
 export const ProjectElement = styled.div`

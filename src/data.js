@@ -8,7 +8,7 @@ let Data = [
                 photo:'UIUX1',
                 p1:"Designer：Cmomo",
                 p2:"Front-end：Cmomo",
-                intro:"Project Intro：Redesign Disney+",
+                intro:"Project Intro：Redesign Disney+. Find user's pain point from User research, then redesign Imformation architecture and UI of this app.",
                 link:"https://www.behance.net/gallery/146765557/Redesign-For-Disney-Plus"
             },
             {
@@ -16,7 +16,7 @@ let Data = [
                 photo:'UIUX2',
                 p1:"Designer：Cmomo",
                 p2:"Front-end：Cmomo",
-                intro:"Project Intro：table game",
+                intro:"Project Intro：Design a web vison of a table game -- 'Abraca...Ｗhat?' ,including UI and UX.",
                 link:"https://www.behance.net/gallery/174423959/Tablegame-UIUX-design-for-web%28Abracahat-%29"
             }
         ]
@@ -30,7 +30,7 @@ let Data = [
                 photo:'FrontEnd1',
                 p1:"Designer：阿不守商店",
                 p2:"Front-end：Cmomo",
-                intro:"Project Intro：Ry+",
+                intro:"Project Intro：This project is to replicate the homepage of an online store, including layout ,RWD and animated effects. ",
                 link:"https://chiumomo.github.io/store_rwd/"
             },
             {
@@ -38,7 +38,7 @@ let Data = [
                 photo:'FrontEnd2',
                 p1:"Designer：學米課程範例",
                 p2:"Front-end：Cmomo",
-                intro:"Project Intro：cafe",
+                intro:"Project Intro：一間咖啡店的網頁設計練習, including layout ,RWD and animated effects. ",
                 link:"https://chiumomo.github.io/store_cafe_RWD/#!"
             },
             {
@@ -46,7 +46,7 @@ let Data = [
                 photo:'FrontEnd3',
                 p1:"Designer：學米導師範例",
                 p2:"Front-end：Cmomo",
-                intro:"Project Intro：pratice",
+                intro:"Project Intro：練習設計大型資料網頁的資料運用及排版，及router的使用。",
                 link:"https://l6oytw.csb.app/#South"
             }
         ]
@@ -59,7 +59,7 @@ let Data = [
                 photo:'Sticker1',
                 p1:"Designer：Cmomo",
                 p2:"Creator：Cmomo",
-                intro:"Project Intro：pratice",
+                intro:"Project Intro：貼圖名稱-鼠魚們的鼠爺日子，靈感來自我家的魚。可愛的底棲魚，有時聰明有時呆萌。",
                 link:"https://store.line.me/stickershop/product/19571939/zh-Hant"
             },
             {
@@ -67,7 +67,7 @@ let Data = [
                 photo:'Sticker2',
                 p1:"Designer：Cmomo",
                 p2:"Creator：Cmomo",
-                intro:"Project Intro：pratice",
+                intro:"Project Intro：貼圖名稱-鼠魚們的鼠爺日子plus。改自第一版，動圖更流暢，活動更豐富。",
                 link:"https://store.line.me/stickershop/product/23164666/zh-Hant"
             },
             {
@@ -75,7 +75,7 @@ let Data = [
                 photo:'Sticker3',
                 p1:"Designer：Cmomo",
                 p2:"Creator：Cmomo",
-                intro:"Project Intro：pratice",
+                intro:"Project Intro：貼圖名稱-火柴人每天都要健身一下，想讓家人一起動一動而做的，但好像都被無視。",
                 link:"https://store.line.me/stickershop/product/20177139/zh-Hant"
             }
         ]
