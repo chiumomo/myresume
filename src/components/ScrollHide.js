@@ -1,0 +1,33 @@
+import $ from "jquery";
+
+const scrollHide=()=>{
+    var bodyClass = $('.Nav');
+    var lastScrollY = 0;
+    var screenWidth = window.innerWidth;
+
+    window.addEventListener('scroll', function(){
+        var st = window.scrollY;
+        // 判斷是向上捲動，而且捲軸超過 200px
+        if( ! st < 0  ){
+            bodyClass.removeClass('show');
+        }
+        else if( st < lastScrollY) {
+            bodyClass.addClass('show mask');
+        }
+        else{
+            bodyClass.removeClass('show mask');
+        };
+        
+        if (st<600 && screenWidth > 700 ){
+            bodyClass.removeClass('mask');
+        }else if(st<300 && screenWidth > 300 ){
+            bodyClass.removeClass('mask');
+        }
+        
+       ; 
+        lastScrollY = st;
+        
+    });
+}
+    
+export default scrollHide;

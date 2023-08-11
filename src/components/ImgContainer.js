@@ -20,7 +20,7 @@ export const ImageContainer = styled(Container)`
 export const ImgContainer = styled(ImageContainer)`
         width: 100%;
         &:before{
-            border-radius: 50px;
+            border-radius: 30px;
             border: solid 1px #fbfbfb;
             overflow: hidden;
             background-size: cover;

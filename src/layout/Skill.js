@@ -17,16 +17,24 @@ import figmaLogo from "../image/figma-logo.png";
 const Logo = [htmlLogo,cssLogo,jsLogo,scssLogo,reactLogo,figmaLogo];
 
 const SkillContainer = styled(Container)`
-    margin: 0 70px ;
+    margin: 0 0 0 40px ;
     color: #056464;
-    margin-bottom: 200px;
-    @media screen and (min-width:660px){
-        margin: 0 20px ;
+    margin-bottom: 100px;
+    @media screen and (min-width:398px){
+        margin: 0 40px ;
+        margin-bottom: 100px;
+    }
+    @media screen and (min-width:490px){
+        margin: 0 50px 0 80px ;
+        margin-bottom: 100px;
+    }
+    @media screen and (min-width:790px){
+        margin: 0 0 0 20px ;
         margin-bottom: 200px;
 
     }
-    @media screen and (min-width:1200px){
-        margin: 0 50px ;
+    @media screen and (min-width:900px){
+        margin: 0 60px ;
         margin-bottom: 300px;
     }
 `
@@ -34,6 +42,7 @@ const SkillContainer = styled(Container)`
 const SkillsValue =styled.div`
     display: block;
     margin-bottom: 4rem;
+
 `
 
 const SkillName=styled.div`
@@ -57,8 +66,8 @@ const SkillName=styled.div`
 `
 const SkillLeaf=styled.div`
     display:inline-block;
-    width: ${(props) => props.wid * 37 }px;
-    padding-top:10px;
+    width: ${(props) => props.wid * 30 }px;
+    padding-top:5px;
     padding-bottom: 20px;
     text-align: left;
     background-image: url(${Leaf});
@@ -66,6 +75,11 @@ const SkillLeaf=styled.div`
     background-repeat: space ;
     background-position-x: left;
     transform: translateY(12px);
+    @media screen and (min-width: 398px) {
+        padding-top: 10px;
+        width: ${(props) => props.wid * 37 }px;
+
+    }
     @media screen and (min-width: 640px) {
         padding-top: 20px;
         width: ${(props) => props.wid * 50 }px;
@@ -106,6 +120,7 @@ const ToolContainer = styled(Container)`
     white-space: nowrap;
     justify-content: space-around;
     border-radius: 1rem;
+    
     @media screen and (min-width:660px){
         flex-wrap: wrap;
         margin: 0 50px ;

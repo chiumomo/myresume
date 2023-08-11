@@ -8,14 +8,15 @@ import { Row,Col } from "antd";
 
 
 const AboutContainer = styled(Container)`
-    /* box-sizing   : border-box; */
-    margin: 0rem 6rem 6rem 6rem;
-    /* height: calc(120%); */
-    @media screen and (min-width: 579px){
-        margin: 2rem 2rem 7.5rem 6rem;
+    margin: 2rem 2rem 4rem 2rem;
+    @media screen and (min-width: 389px){
+        margin: 2rem 2rem 6rem 6rem;
     }
-    @media screen and (min-width: 880px){
-        margin: 2rem 2rem 7rem 6rem;
+    @media screen and (min-width: 579px){
+        margin: 2rem 2rem 7.5rem 7rem;
+    }
+    @media screen and (min-width: 980px){
+        margin: 2rem 2rem 7rem 2rem;
 
     }
     @media screen and (min-width: 1200px){
@@ -27,11 +28,10 @@ const AboutContainer = styled(Container)`
 const TextCard = styled.div`
     /* width: 30rem; */
     margin: 0 1rem;
-
     display: inline-block;
     font-family: Arial, sans-serif;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 2rem;
     padding-top:0% ;
     margin-top: 0%;

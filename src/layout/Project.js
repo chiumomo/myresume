@@ -101,7 +101,7 @@ const Project = ()=>{
                 </ProjectNav>
                 <Span/>
                 <Routes>
-                    <Route exact path="/" element={<Cards/>}>
+                    <Route path="/" element={<Cards/>}>
                     </Route>
                     <Route path="/UIUX" element={<UIUXCard/>}>
                     </Route>

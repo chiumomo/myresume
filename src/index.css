@@ -6,8 +6,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
-  
 }
+
+@media screen and (min-width:298px){
+  html{
+      font-size: 12px;
+    }
+  }
 
 @media screen and (min-width:398px){
   html{
@@ -64,4 +69,18 @@ h6{
   font-size: 0.5rem;
 }
 
+p{
+  display: inline;
+}
 
+.Nav{
+  z-index: 1;
+  visibility: hidden;
+}
+.show{
+  visibility: visible;
+}
+
+.mask{
+  background-color: hsla(186, 81%, 14%, 0.866);
+}

@@ -10,11 +10,12 @@ export const ProjectElement = styled.div`
 padding : 2rem 0;
 `
 export const ProjectText = styled.div`
-font-weight: 300;
+font-weight: 400;
 font-size: 1rem;
 color: #fbfbfb;
 margin-bottom: .5rem;
 align-items: baseline;
+font-family: sans-serif, monospace;
 `
 export const ProjectTitle = styled(ProjectText)`
 margin: .5rem 0;

@@ -6,6 +6,8 @@ import { Row,Col } from "antd";
 
 import github from "../image/square-github-w.png"
 import behance from "../image/square-behance-w.png"
+
+
 const linkGH = "https://github.com/chiumomo/chiumomo.github.io";
 const linkBH = "https://www.behance.net/00c32f79";
 
@@ -46,12 +48,13 @@ const ContactTitle = styled(Title)`
     white-space: nowrap;
 `
 const ContactEmail = styled(Title)`
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
     vertical-align: middle;
-    text-align: right;
     margin: 1rem 0;
     font-family: sans-serif;
+    display: flex;
+    flex-wrap: wrap flex-start;
 `
 
 const Contact = ()=>{
@@ -76,7 +79,7 @@ const Contact = ()=>{
                 <Row>
                     <Col lg={24}>
                         <ContactEmail>
-                            Email:q10110144kh@gmail.com
+                            Email：q10110144kh@gmail.com
                         </ContactEmail>
                     </Col>
                 </Row>

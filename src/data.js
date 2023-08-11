@@ -28,10 +28,11 @@ let Data = [
             {
                 id:'FrontEnd/01',
                 photo:'FrontEnd1',
-                p1:"Designer：阿不守商店",
+                p1:"Designer：阿部守商店",
                 p2:"Front-end：Cmomo",
                 intro:"Project Intro：This project is to replicate the homepage of an online store, including layout ,RWD and animated effects. ",
-                link:"https://chiumomo.github.io/store_rwd/"
+                link:"https://chiumomo.github.io/store_rwd/",
+                code:"https://github.com/chiumomo/store_rwd"
             },
             {
                 id:'FrontEnd/02',
@@ -39,7 +40,8 @@ let Data = [
                 p1:"Designer：學米課程範例",
                 p2:"Front-end：Cmomo",
                 intro:"Project Intro：一間咖啡店的網頁設計練習, including layout ,RWD and animated effects. ",
-                link:"https://chiumomo.github.io/store_cafe_RWD/#!"
+                link:"https://chiumomo.github.io/store_cafe_RWD/#!",
+                code:"https://github.com/chiumomo/store_cafe_RWD"
             },
             {
                 id:'FrontEnd/03',
@@ -47,7 +49,8 @@ let Data = [
                 p1:"Designer：學米導師範例",
                 p2:"Front-end：Cmomo",
                 intro:"Project Intro：練習設計大型資料網頁的資料運用及排版，及router的使用。",
-                link:"https://l6oytw.csb.app/#South"
+                link:"https://l6oytw.csb.app/#South",
+                code:"https://codesandbox.io/s/pratice-useparams-mini2-l6oytw?file=/src/style.js"
             }
         ]
 
