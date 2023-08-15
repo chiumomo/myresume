@@ -49,8 +49,17 @@ let Data = [
                 p1:"Designer：學米導師範例",
                 p2:"Front-end：Cmomo",
                 intro:"Project Intro：練習設計大型資料網頁的資料運用及排版，及router的使用。",
-                link:"https://l6oytw.csb.app/#South",
+                link:"https://l6oytw.csb.app/",
                 code:"https://codesandbox.io/s/pratice-useparams-mini2-l6oytw?file=/src/style.js"
+            },
+            {
+                id:'FrontEnd/04',
+                photo:'FrontEnd4',
+                p1:"Designer：Cmomo",
+                p2:"Front-end：Cmomo",
+                intro:"Project Intro：在React框架下建立作品集，也就是目前網頁。",
+                link:"https://chiumomo.github.io/myresume/",
+                code:"https://github.com/chiumomo/myresume"
             }
         ]
 

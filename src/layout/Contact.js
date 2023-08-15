@@ -46,6 +46,7 @@ const ContactTitle = styled(Title)`
     margin: 0;
     margin-right: 2rem;
     white-space: nowrap;
+    color:honeydew ;
 `
 const ContactEmail = styled(Title)`
     font-size: 1.2rem;
@@ -55,6 +56,8 @@ const ContactEmail = styled(Title)`
     font-family: sans-serif;
     display: flex;
     flex-wrap: wrap flex-start;
+    color:honeydew ;
+
 `
 
 const Contact = ()=>{

@@ -11,8 +11,6 @@ import { Link, Route, Routes,useLocation } from "react-router-dom";
 
 
 
-
-
 const ProjectContainer = styled(Container)`
     display: block;
     justify-content: center;
@@ -83,6 +81,13 @@ const SortButton = styled.div`
         }
         
 `
+const SortButtonBottom = styled(SortButton)`
+    margin-top: -3rem;
+    &::after{
+            transform: translate(-16%,-4rem);
+            
+        }
+`
 
 
 
@@ -121,9 +126,9 @@ const Project = ()=>{
                         const isCurrentPath = location.pathname === `/${sort.id}`;
                         return(
                             <Link to={`/${sort.id}`}> 
-                                <SortButton  isCurrentPath={isCurrentPath}>
+                                <SortButtonBottom  isCurrentPath={isCurrentPath}>
                                     {sort.id}
-                                </SortButton>
+                                </SortButtonBottom>
                             </Link>
                         )
                     })}
