@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container } from "../components/Container";
 import styled from 'styled-components';
 import { Title } from "../components/Title";
@@ -6,9 +6,13 @@ import MovingLeaf from "../components/MovingLeaf"
 import { Row,Col } from "antd";
 
 
+//取得隨機數字
+function getRandomNum(){
+    return Math.floor(Math.random() *7) + 1;
+}
 
 const AboutContainer = styled(Container)`
-    margin: 2rem 2rem 4rem 2rem;
+    margin: 2rem 2rem 5rem 2rem;
     @media screen and (min-width: 389px){
         margin: 2rem 2rem 6rem 6rem;
     }
@@ -20,7 +24,7 @@ const AboutContainer = styled(Container)`
 
     }
     @media screen and (min-width: 1200px){
-        margin: 3rem 3rem 8rem 3rem;
+        margin: 3rem 3rem 9rem 3rem;
         
     }
     
@@ -64,10 +68,15 @@ const ImgCard = styled.div`
         width: 70%;
         border-radius: 180px;
         padding-top:100%;
-        background-color: #ccc;
+        /* background-color: #ccc; */
         left: 50%;
         transform: translate(-50%,0);
-        outline: solid 2px black;
+        outline: solid 1px wheat;
+        transition: background-image .9s ease-in-out;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        background-image: url(${(props) => props.url});
     }
     &:before{
         //外框
@@ -103,6 +112,18 @@ const  MovingLeafL = styled(MovingLeaf)`
 
 const AboutMe = ()=>{
 
+    const [imagePath,setImagePath] = useState('');
+    useEffect(()=>{
+        const intervalId = setInterval(()=>{
+            const randomNum = getRandomNum();
+            const newPath = require(`../image/avatars/0${randomNum}.jpg`);
+            setImagePath(newPath);
+        },4500)
+        return () => {
+            clearInterval(intervalId);
+        };
+    },[]);
+
     return(
         <div id="aboutMe" >
             <Title>
@@ -120,7 +141,7 @@ const AboutMe = ()=>{
                         </TextCard>
                     </Col>
                     <Col lg={8} md={10} sm={10} xs={10}>
-                        <ImgCard>
+                        <ImgCard url={imagePath}>
                         </ImgCard>
                     </Col>
                     <Col lg={8} md={12} sm={12} xs={14}>

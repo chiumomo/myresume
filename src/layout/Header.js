@@ -12,9 +12,10 @@ const HeaderContainer = styled(Container)`
     justify-content: center;
     width:100vw;
     padding-top: 72%;
-    background-position:center;
+    background-position:center ;
     background-image: url(${bgHeader}) ;
     background-size: cover;
+    outline: none;
 `
 export const Navigation =styled.div`
     display:block;
@@ -23,6 +24,7 @@ export const Navigation =styled.div`
     top: 0;
     ul{
         margin: 0 auto ;
+        padding: 1rem 0 !important;
         @media screen and (min-width:579px){
             margin: 0 10vw ;
         }
@@ -58,7 +60,7 @@ const Header = ()=>{
     return(
         <div>
             <HeaderContainer >
-                <Navigation className=" Nav show  ">
+                <Navigation className=" Nav show marginTop ">
                     <ul>
                         <li>
                             <a href="#aboutMe">

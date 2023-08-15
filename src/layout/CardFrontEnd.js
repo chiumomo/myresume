@@ -12,12 +12,12 @@ const CodeButton =styled.button`
     padding: 5px 15px;
     outline: none;
     background-color: rgba(0,255,255,.3);
-    border-radius: 10px;
+    border-radius: 7px;
     margin-top: 1rem;
     font-size: 1rem;
     justify-content: space-around;
     align-items: center;
-    border: solid 1px  rgba(100,255,255,.5);
+    border: solid 1px  rgba(100,255,255,.4);
     &:hover{
             border: solid 1px rgba(0,255,255,.8);
             box-shadow: 0 0 4px 3px  rgba(100,255,255,.5)  ;
@@ -57,7 +57,7 @@ const Svg = styled.div`
             if (!photoObj) return null;
                 return(
                     <ProjectElement key={project.id}>
-                        <Row gutter={[40,40]}>
+                        <Row gutter={[40,20]}>
                             <Col lg={12}  xs={24}>
                                 <a href={project.link} target="_blank">
                                     <ImgContainer_60 key={project.id} url={photoObj.url}>
@@ -87,7 +87,7 @@ const Svg = styled.div`
                             </Col>
                         </Row>    
                     </ProjectElement>
-                     
+                    
 
                 );
 

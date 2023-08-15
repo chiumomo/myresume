@@ -17,7 +17,7 @@ import { CardContainer, ProjectElement, ProjectText, ProjectTitle } from "../com
             if (!photoObj) return null;
                 return(
                     <ProjectElement key={project.id}>
-                        <Row gutter={[40,40]}>
+                        <Row gutter={[40,20]}>
                             <Col lg={12}  xs={24}>
                                 <a href={project.link} target="_blank">
                                     <ImgContainer_75 key={project.id} url={photoObj.url}>

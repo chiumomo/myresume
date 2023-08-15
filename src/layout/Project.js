@@ -16,8 +16,8 @@ import { Link, Route, Routes,useLocation } from "react-router-dom";
 const ProjectContainer = styled(Container)`
     display: block;
     justify-content: center;
-    border-radius: 100px;
-    border:solid 4px black;
+    border-radius: 3rem;
+    border:solid 2px black;
     background-color: #056464;
     margin: 0 10vw 50px 10vw ;
     padding: 40px 20px;
@@ -26,11 +26,16 @@ const ProjectContainer = styled(Container)`
     @media screen and (min-width: 490px){
         margin: 0 15vw  100px 15vw ;
         padding: 60px 40px;
+        border:solid 2px black;
         
     }
     @media screen and (min-width: 769px){
         margin: 0 10vw  200px 10vw ;
         padding: 60px 100px;
+        border:solid 2px black;
+    }
+    @media screen and (min-width: 980px){
+        border:solid 3px black;
     }
 `
 
@@ -101,7 +106,7 @@ const Project = ()=>{
                 </ProjectNav>
                 <Span/>
                 <Routes>
-                    <Route path="/" element={<Cards/>}>
+                    <Route exact path="myresume" element={<Cards/>}>
                     </Route>
                     <Route path="/UIUX" element={<UIUXCard/>}>
                     </Route>
@@ -110,6 +115,20 @@ const Project = ()=>{
                     <Route path="/Sticker" element={<StickerCard/>}>
                     </Route>
                 </Routes>
+                <Span/>
+                <ProjectNav>
+                    {Data.map((sort,key)=>{
+                        const isCurrentPath = location.pathname === `/${sort.id}`;
+                        return(
+                            <Link to={`/${sort.id}`}> 
+                                <SortButton  isCurrentPath={isCurrentPath}>
+                                    {sort.id}
+                                </SortButton>
+                            </Link>
+                        )
+                    })}
+                </ProjectNav>
+
             </ProjectContainer>
 
         </div>

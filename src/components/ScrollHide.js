@@ -9,22 +9,26 @@ const scrollHide=()=>{
         var st = window.scrollY;
         // 判斷是向上捲動，而且捲軸超過 200px
         if( ! st < 0  ){
-            bodyClass.removeClass('show');
+            bodyClass.removeClass('show marginTop');
         }
         else if( st < lastScrollY) {
-            bodyClass.addClass('show mask');
+            bodyClass.addClass('show mask ');
+            bodyClass.removeClass('marginTop');
         }
         else{
             bodyClass.removeClass('show mask');
         };
         
-        if (st<600 && screenWidth > 700 ){
-            bodyClass.removeClass('mask');
-        }else if(st<300 && screenWidth > 300 ){
-            bodyClass.removeClass('mask');
-        }
-        
-       ; 
+        if ( st<300 && screenWidth > 700 ){
+            bodyClass.removeClass('mask ');
+            bodyClass.addClass('marginTop')
+        }else if(st<100 && screenWidth < 700 ){
+            bodyClass.removeClass('mask ');  
+            bodyClass.addClass('marginTop')
+        }else{
+            bodyClass.removeClass('marginTop')
+        };
+
         lastScrollY = st;
         
     });

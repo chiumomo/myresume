@@ -5,10 +5,11 @@ export const Title = styled.div`
     display: flex;
     justify-content: center;
     font-family: 'Indie Flower','Noto Sans TC';
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 600;
-    color: white;
+    color: #016064;
     margin-bottom: 20px;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4);
     @media screen and (min-width: 490px) {
         margin-bottom: 40px;
     }

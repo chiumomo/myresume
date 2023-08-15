@@ -52,6 +52,7 @@ export const ImgContainer_60 = styled(ImgContainer)`
 export const ImgContainer_75 = styled(ImgContainer)`
         &::before{
             padding-top: 75%;
+            background-position: 0 0;
         }
 
 `

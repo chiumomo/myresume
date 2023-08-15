@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import {Row,Col} from "antd";
-import { ImgContainer_100 } from "../components/ImgContainer";
+import { ImgContainer_75 } from "../components/ImgContainer";
 import Data from "../data"
 import photos from "../components/PhptoList";
 import { CardContainer, ProjectElement, ProjectText, ProjectTitle } from "../components/CardsStyled";
@@ -18,11 +18,11 @@ const Cards = ()=>{
                             if (!photoObj) return null;
                             return(
                                 <ProjectElement key={idx}>
-                                <Row gutter={[40,40]}>
+                                <Row gutter={[40,10]}>
                                     <Col lg={12}  xs={24}>
                                         <a href={product.link} target="_blank">
-                                            <ImgContainer_100 key={idx} url={photoObj.url}>
-                                            </ImgContainer_100>  
+                                            <ImgContainer_75 key={idx} url={photoObj.url}>
+                                            </ImgContainer_75>  
                                         </a>
                                     </Col>
                                     <Col lg={12}  xs={24}>

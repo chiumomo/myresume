@@ -83,4 +83,10 @@ p{
 
 .mask{
   background-color: hsla(186, 81%, 14%, 0.866);
+  color: #016067;
+
+}
+
+.marginTop{
+  margin-top: 1.5rem;
 }

@@ -8,11 +8,11 @@ import github from "../image/square-github-w.png"
 import behance from "../image/square-behance-w.png"
 
 
-const linkGH = "https://github.com/chiumomo/chiumomo.github.io";
+const linkGH = "https://github.com/chiumomo";
 const linkBH = "https://www.behance.net/00c32f79";
 
 const ContactContainer = styled(Container)`
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
     width: 60vw;
     border: 4px dashed rgba(200,200,200,.5);
     box-shadow: 0 0 0 4px rgb(30,30,30);

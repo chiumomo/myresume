@@ -112,24 +112,33 @@ const MovingLeafR = styled(MovingLeaf)`
   }
 `
 const ToolContainer = styled(Container)`
-    margin: 0 60px ;
+    /* margin: 0 100px ; */
+    margin: 0 15vw ;
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 100px;
-    box-shadow: 0px 0px 10px rgba(255,255,250,.6);
+    border: solid 1px rgb(21, 122, 22);
     white-space: nowrap;
     justify-content: space-around;
-    border-radius: 1rem;
-    
-    @media screen and (min-width:660px){
+    border-radius: 2rem;
+    background-color: rgb(213, 232, 222);
+    @media screen and (min-width:490px){
         flex-wrap: wrap;
-        margin: 0 50px ;
+        margin: 0 15vw ;
         margin-bottom: 100px;
+        border: solid 2px rgb(21, 122, 22);
+
     }
-    @media screen and (min-width:1200px){
-        flex-wrap: nowrap;
-        margin: 0 60px ;
+    @media screen and (min-width:769px){
+        flex-wrap: wrap;
+        margin: 0 10vw ;
         margin-bottom: 100px;
+        border: solid 2px rgb(21, 122, 22);
+    }
+    @media screen and (min-width:980px){
+        flex-wrap: nowrap;
+        border: solid 3px rgb(21, 122, 22);
+
     }
 `
 
