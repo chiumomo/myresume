@@ -19,10 +19,14 @@ const scrollHide=()=>{
             bodyClass.removeClass('show mask');
         };
         
-        if ( st<300 && screenWidth > 700 ){
+
+        if ( st<650 && screenWidth > 900 ){
             bodyClass.removeClass('mask ');
             bodyClass.addClass('marginTop')
-        }else if(st<100 && screenWidth < 700 ){
+        }else if ( st<400 && screenWidth > 700 ){
+            bodyClass.removeClass('mask ');
+            bodyClass.addClass('marginTop')
+        }else if(st<200 && screenWidth < 700 ){
             bodyClass.removeClass('mask ');  
             bodyClass.addClass('marginTop')
         }else{

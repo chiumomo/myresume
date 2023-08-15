@@ -43,8 +43,12 @@ export const Navigation =styled.div`
                 color: #8B8C8D;
             }
             &:active{
-                color: #aee23e;
+                color: #eea339;
                 text-decoration:underline;
+            }
+            h4{
+                white-space: nowrap !important;
+
             }
         }
     }
