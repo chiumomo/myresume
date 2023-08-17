@@ -79,7 +79,7 @@ let Data = [
                 photo:'Sticker2',
                 p1:"Designer：Cmomo",
                 p2:"Creator：Cmomo",
-                intro:"Project Intro：貼圖名稱-鼠魚們的鼠爺日子plus。改自第一版，動圖更流暢，活動更豐富。",
+                intro:"Project Intro：貼圖名稱-火柴人每天都要健身一下，想讓家人一起動一動而做的，但好像都被無視。",
                 link:"https://store.line.me/stickershop/product/23164666/zh-Hant"
             },
             {
@@ -87,7 +87,7 @@ let Data = [
                 photo:'Sticker3',
                 p1:"Designer：Cmomo",
                 p2:"Creator：Cmomo",
-                intro:"Project Intro：貼圖名稱-火柴人每天都要健身一下，想讓家人一起動一動而做的，但好像都被無視。",
+                intro:"Project Intro：貼圖名稱-鼠魚們的鼠爺日子plus。改自第一版，動圖更流暢，活動更豐富。",
                 link:"https://store.line.me/stickershop/product/20177139/zh-Hant"
             }
         ]

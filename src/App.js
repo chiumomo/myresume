@@ -6,8 +6,12 @@ import Skill from './layout/Skill';
 import Project from './layout/Project';
 import Contact from './layout/Contact';
 import './index.css';
+import { useEffect } from 'react';
 
 function App() {
+  useEffect(()=>{
+    document.title="Cmomo's Resume"
+  },[])
   return (
     <AppContainer>
       <Header/>
