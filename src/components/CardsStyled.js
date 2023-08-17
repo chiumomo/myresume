@@ -10,7 +10,7 @@ margin: 3rem 0;
 `
 export const ProjectText = styled.div`
 font-weight: 400;
-font-size: 1rem;
+font-size: .8rem;
 color: #fbfbfb;
 margin-bottom: .5rem;
 align-items: baseline;
