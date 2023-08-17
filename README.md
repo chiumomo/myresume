@@ -1,4 +1,4 @@
-# It' my resume page
+# It' my resume build by React and JavaScript.
 
 
 
