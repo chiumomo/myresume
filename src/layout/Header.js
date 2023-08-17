@@ -9,13 +9,15 @@ import scrollHide from "../components/ScrollHide";
 
 const HeaderContainer = styled(Container)`
     display: flex;
+    transform: translateY(-5px);
     justify-content: center;
     width:100vw;
-    padding-top: 72%;
+    padding-top: 70%;
     background-position:center ;
     background-image: url(${bgHeader}) ;
     background-size: cover;
     outline: none;
+    background-repeat: no-repeat;
 `
 export const Navigation =styled.div`
     display:block;
