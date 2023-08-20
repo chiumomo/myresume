@@ -9,12 +9,14 @@ const LoadingContainer = styled(Container)`
     top: 0;
     left: 0;
     width: 100vw;
-    height: 110vh;
-    background-color: rgba(210,210,200,.95);
+    height: 100vh;
+    background-color: rgba(210,210,200,1);
     z-index: 2;
     justify-content: center;
     align-content: center;
-    transition: all .3s;
+    transition: transform 1s ease, opacity 1s linear;
+    transform: translateY(${props => props.isHidden ? '-100vh' : '0'});
+    opacity: ${props => props.isHidden ? '0' : '1'};
     
     h1{
         display: block;
@@ -31,7 +33,8 @@ const Loading=(()=>{
     useEffect(() => {
       const timer = setTimeout(() => {
         setIsHidden(true);
-      }, 8000);
+      }, 10000);
+
   
       return () => {
         clearTimeout(timer);
@@ -40,17 +43,17 @@ const Loading=(()=>{
     
     return(
         <div>
-        {! isHidden &&(
-            <LoadingContainer >
+        
+            <LoadingContainer isHidden={isHidden} >
                 <div class="text-container">
-                    <h1 class=" flip-moving" >\ Loading /</h1>
+                    <h1 class=" leftRight-moving" >\ Loading /</h1>
                 </div>
                 <div class="spinner">
                     <div class="cube1"></div>
                     <div class="cube2"></div>
                 </div>
             </LoadingContainer>
-                ) }
+                
         </div>
     )
 })

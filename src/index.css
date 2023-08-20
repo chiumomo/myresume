@@ -106,7 +106,7 @@ p{
 .spinner{
   position:absolute;
   align-self: center;
-  animation: spinner-move  9s infinite linear;
+  animation: spinner-move  7s infinite linear;
 }
 
 .cube1, .cube2 {
@@ -127,7 +127,7 @@ p{
 .cube2 {
   -webkit-animation-delay: -1s;
   animation-delay: -1s;
-  background-color: rgba(219, 190, 0, 0.945);
+  background-color: rgba(236, 187, 26, 0.945);
 
 }
 
@@ -180,19 +180,19 @@ p{
 }
 
 
-.flip-moving{
-  animation: flip-moving 10s linear  infinite ;
-  -webkit-animation: flip-moving 10s linear  infinite ;
+.leftRight-moving{
+  animation: leftRight-moving 10s linear  infinite ;
+  -webkit-animation: leftRight-moving 10s linear  infinite ;
 }
 
-@-webkit-keyframes flip-moving{
+@-webkit-keyframes leftRight-moving{
   0% { -webkit-transform: translateX(0px) }
   25% { -webkit-transform: translateX(-25vw)  }
   50% { -webkit-transform: translateX(0px)   }
   75% { -webkit-transform: translateX(25vw)   }
   100% { -webkit-transform: translateX(0px) }
 }
-@keyframes flip-moving{
+@keyframes leftRight-moving{
   0% { -webkit-transform: translateX(0px) }
   25% { -webkit-transform: translateX(-25vw)  }
   50% { -webkit-transform: translateX(0px)   }
