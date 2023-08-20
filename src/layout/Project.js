@@ -8,6 +8,7 @@ import UIUXCard from "./CardUIUX";
 import FrontEndCard from "./CardFrontEnd";
 import StickerCard from "./CardSticker";
 import { Link, Route, Routes,useLocation } from "react-router-dom";
+import { titleWowAniClass } from "../components/WowAni";
 
 
 
@@ -95,7 +96,7 @@ const Project = ()=>{
     const location = useLocation();
     return(
         <div id="projects"  >
-            <Title >Projects</Title>
+            <Title className={titleWowAniClass}>Projects</Title>
             <ProjectContainer>
                 <ProjectNav>
                     {Data.map((sort,key)=>{

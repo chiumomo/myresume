@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue' ,'Indie Flower','Noto Sans TC',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,6 +41,9 @@ code {
     monospace;
 }
 
+a{
+  cursor: pointer;
+}
 
 h1,h2,h3,h4,h5,h6,ul,li,a{
   margin: 0;
@@ -101,10 +104,9 @@ p{
 
 
 .spinner{
-
-  position: relative;
+  position:absolute;
   align-self: center;
-  animation: spinner-move  10s infinite linear;
+  animation: spinner-move  9s infinite linear;
 }
 
 .cube1, .cube2 {
@@ -175,4 +177,30 @@ p{
     transform: rotate(-360deg);
     -webkit-transform: rotate(-360deg);
   }
+}
+
+
+.flip-moving{
+  animation: flip-moving 10s linear  infinite ;
+  -webkit-animation: flip-moving 10s linear  infinite ;
+}
+
+@-webkit-keyframes flip-moving{
+  0% { -webkit-transform: translateX(0px) }
+  25% { -webkit-transform: translateX(-25vw)  }
+  50% { -webkit-transform: translateX(0px)   }
+  75% { -webkit-transform: translateX(25vw)   }
+  100% { -webkit-transform: translateX(0px) }
+}
+@keyframes flip-moving{
+  0% { -webkit-transform: translateX(0px) }
+  25% { -webkit-transform: translateX(-25vw)  }
+  50% { -webkit-transform: translateX(0px)   }
+  75% { -webkit-transform: translateX(25vw)   }
+  100% { -webkit-transform: translateX(0px) }
+}
+.text-container{
+  display: flex;
+  align-content: center;
+  transform: translateY(-20px);
 }

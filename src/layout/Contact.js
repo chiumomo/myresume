@@ -7,6 +7,7 @@ import { Row,Col } from "antd";
 import github from "../image/square-github-w.png"
 import behance from "../image/square-behance-w.png"
 import { bounceLWowAniClass, flipWowAniClass } from "../components/WowAni";
+import { flipInX } from "react-animations";
 
 
 const linkGH = "https://github.com/chiumomo";
@@ -64,7 +65,7 @@ const ContactEmail = styled(Title)`
 const Contact = ()=>{
     return(
         <div id="contact">
-            <ContactContainer className={flipWowAniClass}>
+            <ContactContainer className=" wow flipInX">
                 <Row gutter={[20,20]}>
                     <Col lg={14} md={14} sm={24} xs={24}>
                         <ContactTitle>Contact me</ContactTitle>
