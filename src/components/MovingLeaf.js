@@ -11,7 +11,7 @@ const MovingLeaf = styled.div`
   background-repeat: no-repeat;
   background-image: url(${BigLeaf});
   animation-duration: 10s;
-  animation-delay: 0ms;
+  animation-delay: 2000ms;
   animation-iteration-count: infinite;
 `
 

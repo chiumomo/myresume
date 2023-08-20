@@ -5,6 +5,8 @@ import { Title } from "../components/Title";
 import MovingLeaf from "../components/MovingLeaf"
 import { Row,Col } from "antd";
 
+import { divWowAniClass, titleWowAniClass } from "../components/WowAni";
+
 
 //取得隨機數字
 function getRandomNum(){
@@ -61,22 +63,22 @@ const TextCard = styled.div`
     
 `
 const ImgCard = styled.div`
-    &:after{
-        //個人照
-        content: '';
-        position: absolute;
-        width: 70%;
-        border-radius: 180px;
-        padding-top:100%;
-        /* background-color: #ccc; */
-        left: 50%;
-        transform: translate(-50%,0);
-        outline: solid 1px wheat;
-        transition: background-image .9s ease-in-out;
-        background-size: cover;
-        background-repeat: no-repeat;
-        overflow: hidden;
-        background-image: url(${(props) => props.url});
+
+&:after{
+    //個人照
+    content: '';
+    position: absolute;
+    width: 70%;
+    border-radius: 180px;
+    padding-top:100%;
+    left: 50%;
+    transform: translate(-50%,0);
+    outline: solid 1px wheat;
+    transition: background-image .9s ease-in-out;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-image: url(${(props) => props.url});
     }
     &:before{
         //外框
@@ -95,6 +97,7 @@ const  MovingLeafL = styled(MovingLeaf)`
     animation-duration: 12s;
 
     @keyframes movingL {
+  
     0% {
     rotate: 15deg;
     transform: translate(-65%,0%);
@@ -102,6 +105,8 @@ const  MovingLeafL = styled(MovingLeaf)`
     50% {
     rotate: -20deg;
     transform: translate(-20%,-5%);
+    transform:scale(0.7);
+
     }
     100% {
     rotate: 15deg;
@@ -113,23 +118,26 @@ const  MovingLeafL = styled(MovingLeaf)`
 const AboutMe = ()=>{
 
     const [imagePath,setImagePath] = useState('');
+
     useEffect(()=>{
         const intervalId = setInterval(()=>{
             const randomNum = getRandomNum();
             const newPath = require(`../image/avatars/0${randomNum}.jpg`);
             setImagePath(newPath);
         },4500)
+
         return () => {
             clearInterval(intervalId);
         };
+                
     },[]);
 
     return(
         <div id="aboutMe" >
-            <Title>
+            <Title className={titleWowAniClass}>
                 About me
             </Title>
-            <AboutContainer>
+            <AboutContainer className={divWowAniClass}>
                 <Row gutter={[20,20]}>
                     <Col lg={8} md={12} sm={12} xs={24}>
                         <TextCard>
@@ -155,7 +163,7 @@ const AboutMe = ()=>{
                         </TextCard>
                     </Col>
                 </Row>
-                <MovingLeafL/>
+                <MovingLeafL />
             </AboutContainer>
         </div>
     )

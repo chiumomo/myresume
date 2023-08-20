@@ -1,11 +1,12 @@
 import React from "react";
 import styled from 'styled-components';
 import {Row,Col} from "antd";
-import { ImgContainer_60 } from "../components/ImgContainer";
+import { ImgContainer60 } from "../components/ImgContainer";
 import Data from "../data";
 import photos from "../components/PhptoList";
 import { CardContainer, ProjectElement, ProjectText, ProjectTitle } from "../components/CardsStyled";
 import github from "../image/square-github-w.png"
+import { slideInRWowAniClass } from "../components/WowAni";
 
 const CodeButton =styled.button`
     display: flex;
@@ -51,7 +52,7 @@ const Svg = styled.div`
   const FrontEndCard = ()=>{
       
       return(
-          <CardContainer>
+          <CardContainer className={slideInRWowAniClass}>
             {Data.find((sort) => sort.id === "FrontEnd").children.map((project) => {
             const photoObj = photos.find((item) => item.id === project.photo);
             if (!photoObj) return null;
@@ -60,8 +61,8 @@ const Svg = styled.div`
                         <Row gutter={[40,20]}>
                             <Col lg={12}  xs={24}>
                                 <a href={project.link} target="_blank">
-                                    <ImgContainer_60 key={project.id} url={photoObj.url}>
-                                    </ImgContainer_60>  
+                                    <ImgContainer60 key={project.id} url={photoObj.url}>
+                                    </ImgContainer60>  
                                 </a>
                                 <a href={project.code} target="_blank">
                                     <CodeButton >

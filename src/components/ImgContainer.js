@@ -35,28 +35,28 @@ export const ImgContainer = styled(ImageContainer)`
 
 
 
-export const ImgContainer_50 = styled(ImgContainer)`
+export const ImgContainer50 = styled(ImgContainer)`
         &::before{
             padding-top: 50%;
         }
 
 `
 
-export const ImgContainer_60 = styled(ImgContainer)`
+export const ImgContainer60 = styled(ImgContainer)`
         &::before{
             padding-top: 60%;
         }
 
 `
 
-export const ImgContainer_75 = styled(ImgContainer)`
+export const ImgContainer75 = styled(ImgContainer)`
         &::before{
             padding-top: 75%;
             background-position: 0 0;
         }
 
 `
-export const ImgContainer_100 = styled(ImgContainer)`
+export const ImgContainer100 = styled(ImgContainer)`
         &::before{
             padding-top: 100%;
         }

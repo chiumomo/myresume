@@ -5,14 +5,14 @@ import { Title } from "../components/Title";
 import Leaf from "../image/leaf.png" 
 import MovingLeaf from "../components/MovingLeaf";
 import { ImageContainer } from "../components/ImgContainer";
-
 import htmlLogo from "../image/html-logo.png";
-
 import reactLogo from "../image/react-logo2.png";
 import jsLogo from "../image/Javascript-logo-basico.png";
 import cssLogo from "../image/css-logo.png";
 import scssLogo from "../image/sass.png";
 import figmaLogo from "../image/figma-logo.png";
+import { bounceLWowAniClass, divWowAniClass, flipWowAniClass, titleWowAniClass } from "../components/WowAni";
+
 
 const Logo = [htmlLogo,cssLogo,jsLogo,scssLogo,reactLogo,figmaLogo];
 
@@ -101,10 +101,12 @@ const MovingLeafR = styled(MovingLeaf)`
     rotate: -50deg;
     transform: translate(160%,100%);
     }
-    50% {
-    rotate: -30deg;
-    transform: translate(130%,40%);
+    
+    65% {
+    rotate: -20deg;
+    transform: scaleX(0.7) scaleY(0.4) translate(175%,30%);
     }
+    
     100% {
     rotate: -50deg;
     transform: translate(160%,100%);
@@ -162,13 +164,12 @@ const ToolImgContainer = styled(ImageContainer)`
 
 const Skill =()=>{
 
-
     return(
         <div id="skills" >
-            <Title>
+            <Title className={titleWowAniClass}>
                 Skills
             </Title>
-            <SkillContainer>
+            <SkillContainer className={ bounceLWowAniClass}>
                 <SkillsValue>
                     <SkillName>UI</SkillName>
                     <SkillLeaf wid={7} />
@@ -191,10 +192,10 @@ const Skill =()=>{
                 </SkillsValue>
                 <MovingLeafR/>
             </SkillContainer>
-            <Title>
+            <Title className={titleWowAniClass}>
                 Main tools
             </Title>
-            <ToolContainer>
+            <ToolContainer className={flipWowAniClass}>
                 {Logo.map((logo,idx)=>{
                     return(
                         <ToolImgContainer key={idx} url={logo} />

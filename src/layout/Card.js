@@ -1,15 +1,16 @@
 import React from "react";
 import styled from 'styled-components';
 import {Row,Col} from "antd";
-import { ImgContainer_75 } from "../components/ImgContainer";
+import { ImgContainer75 } from "../components/ImgContainer";
 import Data from "../data"
 import photos from "../components/PhptoList";
 import { CardContainer, ProjectElement, ProjectText, ProjectTitle } from "../components/CardsStyled";
+import { divWowAniClass } from "../components/WowAni";
 
 
 const Cards = ()=>{
     return(
-        <CardContainer>
+        <CardContainer className={divWowAniClass}>
             {Data.map((sort,key) => {
                 return(
                     <div key={key}>
@@ -21,8 +22,8 @@ const Cards = ()=>{
                                 <Row gutter={[40,10]}>
                                     <Col lg={12}  xs={24}>
                                         <a href={product.link} target="_blank">
-                                            <ImgContainer_75 key={idx} url={photoObj.url}>
-                                            </ImgContainer_75>  
+                                            <ImgContainer75 key={idx} url={photoObj.url}>
+                                            </ImgContainer75>  
                                         </a>
                                     </Col>
                                     <Col lg={12}  xs={24}>

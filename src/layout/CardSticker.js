@@ -1,17 +1,18 @@
 import React from "react";
 import styled from 'styled-components';
 import {Row,Col} from "antd";
-import { ImgContainer_100 } from "../components/ImgContainer";
+import { ImgContainer100 } from "../components/ImgContainer";
 import Data from "../data";
 import photos from "../components/PhptoList";
 import { CardContainer, ProjectElement, ProjectText, ProjectTitle } from "../components/CardsStyled";
+import { slideInRWowAniClass } from "../components/WowAni";
 
 
 
   const StickerCard = ()=>{
       
       return(
-          <CardContainer>
+          <CardContainer className={slideInRWowAniClass}>
             {Data.find((sort) => sort.id === "Sticker").children.map((project) => {
             const photoObj = photos.find((item) => item.id === project.photo);
             if (!photoObj) return null;
@@ -20,8 +21,8 @@ import { CardContainer, ProjectElement, ProjectText, ProjectTitle } from "../com
                         <Row gutter={[40,30]}>
                             <Col lg={12}  xs={24}>
                                 <a href={project.link} target="_blank">
-                                    <ImgContainer_100 key={project.id} url={photoObj.url}>
-                                    </ImgContainer_100>  
+                                    <ImgContainer100 key={project.id} url={photoObj.url}>
+                                    </ImgContainer100>  
                                 </a>
                             </Col>
                             <Col lg={12}  xs={24}>

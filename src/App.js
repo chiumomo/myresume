@@ -6,18 +6,21 @@ import Skill from './layout/Skill';
 import Project from './layout/Project';
 import Contact from './layout/Contact';
 import './index.css';
-import { Helmet } from 'react-helmet';
+import Loading from './layout/Loading';
 
-function App() {
+// import { Helmet } from 'react-helmet';
 
+const App=()=> {
   return (
     <AppContainer>
-      <Helmet>
+      <Loading/>
+      {/* <Helmet>
         <title>Cmomo's Resume</title>
         <meta name="description" content="App DescriptioCmomo's resume Website created using create-react-appn" />
         <meta name="theme-color" content="#ffaf68" />
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/avatar.png" />
-      </Helmet>
+        <link rel="icon" href="%PUBLIC_URL%/avatar.png" />
+      </Helmet> */}
       <Header/>
       <AboutMe/>
       <Skill/>

@@ -9,14 +9,14 @@ const FooterContainer = styled(Container)`
     color: #fbfbfb;
     font-size: .7rem;
     line-height: 1.5rem;
+   
 `
 
 const Footer = ()=>{
     return(
         <div>
-            
-            <FooterContainer>
-                <div>Copyright © 2023 Cmomo.TW</div>
+            <FooterContainer >
+                    <p >Copyright © 2023 Cmomo.TW</p>
             </FooterContainer>
         </div>
     )
