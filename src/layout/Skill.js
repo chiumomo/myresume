@@ -3,7 +3,7 @@ import { Container } from "../components/Container";
 import styled from 'styled-components';
 import { Title } from "../components/Title";
 import Leaf from "../image/leaf.png" 
-// import MovingLeaf from "../components/MovingLeaf";
+import MovingLeaf from "../components/MovingLeaf";
 import { ImageContainer } from "../components/ImgContainer";
 import htmlLogo from "../image/html-logo.png";
 import reactLogo from "../image/react-logo2.png";
@@ -11,7 +11,7 @@ import jsLogo from "../image/Javascript-logo-basico.png";
 import cssLogo from "../image/css-logo.png";
 import scssLogo from "../image/sass.png";
 import figmaLogo from "../image/figma-logo.png";
-import { bounceLWowAniClass, flipWowAniClass, titleWowAniClass } from "../components/WowAni";
+import { bounceLWowAniClass, divWowAniClass, flipWowAniClass, titleWowAniClass } from "../components/WowAni";
 
 
 const Logo = [htmlLogo,cssLogo,jsLogo,scssLogo,reactLogo,figmaLogo];

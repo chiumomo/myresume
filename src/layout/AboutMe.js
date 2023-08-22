@@ -27,7 +27,7 @@ const AboutContainer = styled(Container)`
 
     }
     @media screen and (min-width: 1200px){
-        margin: 3rem 3rem -2rem 3rem;
+        margin: 3rem 3rem 9rem 3rem;
         
     }
     

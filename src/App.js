@@ -7,21 +7,11 @@ import Project from './layout/Project';
 import Contact from './layout/Contact';
 import './index.css';
 import Loading from './layout/Loading';
-import initWow from "../src/components/WowAni";
-// import { Helmet } from 'react-helmet';
 
 const App=()=> {
-  initWow();
   return (
     <AppContainer>
       <Loading/>
-      {/* <Helmet>
-        <title>Cmomo's Resume</title>
-        <meta name="description" content="App DescriptioCmomo's resume Website created using create-react-appn" />
-        <meta name="theme-color" content="#ffaf68" />
-        <link rel="apple-touch-icon" href="%PUBLIC_URL%/avatar.png" />
-        <link rel="icon" href="%PUBLIC_URL%/avatar.png" />
-      </Helmet> */}
       <Header/>
       <AboutMe/>
       <Skill/>
