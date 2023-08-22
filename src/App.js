@@ -7,10 +7,14 @@ import Project from './layout/Project';
 import Contact from './layout/Contact';
 import './index.css';
 import Loading from './layout/Loading';
+import {NavigateReset, ScrollToProject,ScrollToTop} from './components/ScrollTo';
 
 const App=()=> {
   return (
     <AppContainer>
+      <ScrollToTop/>
+      {/* <NavigateReset/> */}
+      <ScrollToProject/>
       <Loading/>
       <Header/>
       <AboutMe/>
