@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { Container } from "../components/Container";
 import styled from "styled-components";
 import "animate.css";
+import { disableScroll } from "../components/ScrollHide";
 
 const LoadingContainer = styled(Container)`
     display: flex;
@@ -11,7 +12,7 @@ const LoadingContainer = styled(Container)`
     width: 100vw;
     height: 100vh;
     background-color: rgba(210,210,200,1);
-    z-index: 2;
+    z-index: ${props => props.isHidden ? '0' : '2'};
     justify-content: center;
     align-content: center;
     transition: transform 1s ease, opacity 1s linear;
@@ -26,24 +27,39 @@ const LoadingContainer = styled(Container)`
     }
 
 `
+// 禁止捲動
+function enableScroll() {
+    const loadingContainer = document.getElementById('LoadingContainer');
+    if (loadingContainer) {
+       loadingContainer.style.overflow = 'auto';
+    }
+ }
+
 
 const Loading=(()=>{
     const [isHidden, setIsHidden] = useState(false);
 
     useEffect(() => {
-      const timer = setTimeout(() => {
-        setIsHidden(true);
-      }, 10000);
+        document.body.style.overflow = 'hidden';
 
-  
-      return () => {
+        const timer = setTimeout(() => {
+            setIsHidden(true);
+    }, 10000);
+      
+    return () => {
         clearTimeout(timer);
       };
     }, []);
     
+    if (isHidden){
+        document.body.style.overflow = 'auto';
+    }else{
+        document.body.style.overflow = 'none';
+    };
+      
+
     return(
         <div>
-        
             <LoadingContainer isHidden={isHidden} >
                 <div class="text-container">
                     <h1 class=" leftRight-moving" >\ Loading /</h1>

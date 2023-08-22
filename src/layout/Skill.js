@@ -36,6 +36,7 @@ const SkillContainer = styled(Container)`
     @media screen and (min-width:900px){
         margin: 0 60px ;
         margin-bottom: 300px;
+
     }
 `
     
@@ -92,27 +93,27 @@ const SkillLeaf=styled.div`
     }
 `
 
-// const MovingLeafR = styled(MovingLeaf)`
-//     animation-name:movingR;
-//     animation-duration: 15s;
+const MovingLeafR = styled(MovingLeaf)`
+    animation-name:movingR;
+    animation-duration: 15s;
 
-//     @keyframes movingR {
-//     0% {
-//     rotate: -50deg;
-//     transform: translate(160%,100%);
-//     }
+    @keyframes movingR {
+    0% {
+    rotate: -50deg;
+    transform: translate(160%,100%);
+    }
     
-//     65% {
-//     rotate: -20deg;
-//     transform: scaleX(0.7) scaleY(0.4) translate(175%,30%);
-//     }
+    65% {
+    rotate: -20deg;
+    transform: scaleX(0.7) scaleY(0.4) translate(175%,30%);
+    }
     
-//     100% {
-//     rotate: -50deg;
-//     transform: translate(160%,100%);
-//     }
-//   }
-// `
+    100% {
+    rotate: -50deg;
+    transform: translate(160%,100%);
+    }
+  }
+`
 const ToolContainer = styled(Container)`
     /* margin: 0 100px ; */
     margin: 0 15vw ;
@@ -165,7 +166,7 @@ const ToolImgContainer = styled(ImageContainer)`
 const Skill =()=>{
 
     return(
-        <div id="skills" >
+        <div id="skills" style={{overflow:'hidden'}} >
             <Title className={titleWowAniClass}>
                 Skills
             </Title>
@@ -190,7 +191,7 @@ const Skill =()=>{
                     <SkillName>JavaScript</SkillName>
                     <SkillLeaf wid={6}></SkillLeaf>
                 </SkillsValue>
-                {/* <MovingLeafR/> */}
+                <MovingLeafR/>
             </SkillContainer>
             <Title className={titleWowAniClass}>
                 Main tools
