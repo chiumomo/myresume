@@ -3,7 +3,7 @@ import { Container } from "../components/Container";
 import styled from 'styled-components';
 import { Title } from "../components/Title";
 import Leaf from "../image/leaf.png" 
-import MovingLeaf from "../components/MovingLeaf";
+// import MovingLeaf from "../components/MovingLeaf";
 import { ImageContainer } from "../components/ImgContainer";
 import htmlLogo from "../image/html-logo.png";
 import reactLogo from "../image/react-logo2.png";
@@ -11,7 +11,7 @@ import jsLogo from "../image/Javascript-logo-basico.png";
 import cssLogo from "../image/css-logo.png";
 import scssLogo from "../image/sass.png";
 import figmaLogo from "../image/figma-logo.png";
-import { bounceLWowAniClass, divWowAniClass, flipWowAniClass, titleWowAniClass } from "../components/WowAni";
+import { bounceLWowAniClass, flipWowAniClass, titleWowAniClass } from "../components/WowAni";
 
 
 const Logo = [htmlLogo,cssLogo,jsLogo,scssLogo,reactLogo,figmaLogo];
@@ -92,27 +92,27 @@ const SkillLeaf=styled.div`
     }
 `
 
-const MovingLeafR = styled(MovingLeaf)`
-    animation-name:movingR;
-    animation-duration: 15s;
+// const MovingLeafR = styled(MovingLeaf)`
+//     animation-name:movingR;
+//     animation-duration: 15s;
 
-    @keyframes movingR {
-    0% {
-    rotate: -50deg;
-    transform: translate(160%,100%);
-    }
+//     @keyframes movingR {
+//     0% {
+//     rotate: -50deg;
+//     transform: translate(160%,100%);
+//     }
     
-    65% {
-    rotate: -20deg;
-    transform: scaleX(0.7) scaleY(0.4) translate(175%,30%);
-    }
+//     65% {
+//     rotate: -20deg;
+//     transform: scaleX(0.7) scaleY(0.4) translate(175%,30%);
+//     }
     
-    100% {
-    rotate: -50deg;
-    transform: translate(160%,100%);
-    }
-  }
-`
+//     100% {
+//     rotate: -50deg;
+//     transform: translate(160%,100%);
+//     }
+//   }
+// `
 const ToolContainer = styled(Container)`
     /* margin: 0 100px ; */
     margin: 0 15vw ;
@@ -190,7 +190,7 @@ const Skill =()=>{
                     <SkillName>JavaScript</SkillName>
                     <SkillLeaf wid={6}></SkillLeaf>
                 </SkillsValue>
-                <MovingLeafR/>
+                {/* <MovingLeafR/> */}
             </SkillContainer>
             <Title className={titleWowAniClass}>
                 Main tools

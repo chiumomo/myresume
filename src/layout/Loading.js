@@ -11,11 +11,11 @@ const LoadingContainer = styled(Container)`
     width: 100vw;
     height: 100vh;
     background-color: rgba(210,210,200,1);
-    z-index: 2;
+    z-index:${props => props.isHidden ? '1' : '3'};
     justify-content: center;
     align-content: center;
     transition: transform 1s ease, opacity 1s linear;
-    transform: translateY(${props => props.isHidden ? '-100vh' : '0'});
+    transform: translateY(${props => props.isHidden ? '100vh' : '0'});
     opacity: ${props => props.isHidden ? '0' : '1'};
     
     h1{
@@ -33,7 +33,7 @@ const Loading=(()=>{
     useEffect(() => {
       const timer = setTimeout(() => {
         setIsHidden(true);
-      }, 10000);
+      }, 8500);
 
   
       return () => {

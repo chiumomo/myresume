@@ -14,19 +14,20 @@ function getRandomNum(){
 }
 
 const AboutContainer = styled(Container)`
-    margin: 2rem 2rem 5rem 2rem;
+    margin: 2rem 2rem 0rem 2rem;
+    overflow: visible;
     @media screen and (min-width: 389px){
-        margin: 2rem 2rem 6rem 6rem;
+        margin: 2rem 2rem -1rem 6rem;
     }
     @media screen and (min-width: 579px){
-        margin: 2rem 2rem 7.5rem 7rem;
+        margin: 2rem 2rem -1rem 7rem;
     }
     @media screen and (min-width: 980px){
-        margin: 2rem 2rem 7rem 2rem;
+        margin: 2rem 2rem -1rem 2rem;
 
     }
     @media screen and (min-width: 1200px){
-        margin: 3rem 3rem 9rem 3rem;
+        margin: 3rem 3rem -2rem 3rem;
         
     }
     
@@ -124,7 +125,7 @@ const AboutMe = ()=>{
             const randomNum = getRandomNum();
             const newPath = require(`../image/avatars/0${randomNum}.jpg`);
             setImagePath(newPath);
-        },4500)
+        },4000)
 
         return () => {
             clearInterval(intervalId);

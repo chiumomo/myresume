@@ -7,7 +7,6 @@ const scrollHide=()=>{
 
     window.addEventListener('scroll', function(){
         var st = window.scrollY;
-        // 判斷是向上捲動，而且捲軸超過 200px
         if( ! st < 0  ){
             bodyClass.removeClass('show marginTop');
         }

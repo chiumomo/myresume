@@ -7,10 +7,11 @@ import Project from './layout/Project';
 import Contact from './layout/Contact';
 import './index.css';
 import Loading from './layout/Loading';
-
+import initWow from "../src/components/WowAni";
 // import { Helmet } from 'react-helmet';
 
 const App=()=> {
+  initWow();
   return (
     <AppContainer>
       <Loading/>

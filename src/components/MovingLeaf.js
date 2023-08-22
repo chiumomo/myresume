@@ -3,8 +3,8 @@ import BigLeaf from '../image/bigleaf.png'
 
 
 const MovingLeaf = styled.div`
-  position: absolute;
   width: 40%;
+  margin: 0;
   padding-top: 30%;
   background-size: contain;
   background-position: center;
