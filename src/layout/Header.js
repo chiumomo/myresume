@@ -20,9 +20,9 @@ const HeaderContainer = styled(Container)`
     background-repeat: no-repeat;
 `
 export const Navigation =styled.div`
-    display: block;
+    display:block;
     width: 100%;
-    position: fixed;
+    position: fixed ;
     top: 0;
     ul{
         margin: 0 auto ;

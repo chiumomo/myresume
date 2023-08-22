@@ -77,11 +77,11 @@ p{
 }
 
 .Nav{
-  z-index: 2;
+  z-index: 1;
   visibility: hidden;
 }
 .show{
-  visibility: visible ;
+  visibility: visible;
 }
 
 .hide{
