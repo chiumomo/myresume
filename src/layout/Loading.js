@@ -5,7 +5,7 @@ import "animate.css";
 
 const LoadingContainer = styled(Container)`
     display: flex;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
@@ -15,7 +15,7 @@ const LoadingContainer = styled(Container)`
     justify-content: center;
     align-content: center;
     transition: transform 1s ease, opacity 1s linear;
-    transform: translateY(${props => props.isHidden ? '-100vh' : '0'});
+    transform: translateY(${props => props.isHidden ? '100vh' : '0'});
     opacity: ${props => props.isHidden ? '0' : '1'};
     
     h1{

@@ -8,17 +8,20 @@ import scrollHide from "../components/ScrollHide";
 
 
 const HeaderContainer = styled(Container)`
-    display: flex;
-    transform: translateY(-5px);
-    justify-content: center;
     width:100vw;
+    `
+const HeaderImg=styled.img`
+    width: 100%;
     padding-top: 70%;
     background-position:center ;
     background-image: url(${bgHeader}) ;
     background-size: cover;
     outline: none;
     background-repeat: no-repeat;
+
 `
+
+
 export const Navigation =styled.div`
     display:block;
     width: 100%;
@@ -66,6 +69,7 @@ const Header = ()=>{
     return(
         <div>
             <HeaderContainer >
+                <HeaderImg></HeaderImg>
                 <Navigation className=" Nav show marginTop ">
                     <ul>
                         <li>
