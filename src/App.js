@@ -14,7 +14,7 @@ const App=()=> {
   initWow();
   return (
     <AppContainer>
-      <Loading/>
+      {/* <Loading/> */}
       {/* <Helmet>
         <title>Cmomo's Resume</title>
         <meta name="description" content="App DescriptioCmomo's resume Website created using create-react-appn" />
