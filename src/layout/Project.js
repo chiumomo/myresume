@@ -112,7 +112,7 @@ const Project = ()=>{
                 </ProjectNav>
                 <Span/>
                 <Routes>
-                    <Route path="/myresume" element={<Cards/>}>
+                    <Route path="/myresume/" element={<Cards/>}>
                     </Route>
                     <Route path="/UIUX" element={<UIUXCard/>}>
                     </Route>

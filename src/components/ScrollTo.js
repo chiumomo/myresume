@@ -13,7 +13,7 @@ export function pageReload() {
 
         if (navigationType === 'reload') {
     
-        window.location.href = '/myresume';
+        window.location.href = '/myresume/';
             }
     }
     return null;
