@@ -7,12 +7,11 @@ import Project from './layout/Project';
 import Contact from './layout/Contact';
 import './index.css';
 import Loading from './layout/Loading';
-import {ScrollToProject,ScrollToTop} from './components/ScrollTo';
+import {ScrollToProject} from './components/ScrollTo';
 
 const App=()=> {
   return (
     <AppContainer>
-      <ScrollToTop/>
       <ScrollToProject/>
       <Loading/>
       <Loading/>
