@@ -8,12 +8,11 @@ import Contact from './layout/Contact';
 import './index.css';
 import Loading from './layout/Loading';
 import {ScrollToProject} from './components/ScrollTo';
-import { WowAniInit } from './components/WowAni';
-// import WOW from "wow.js";
-// import 'wow.js/css/libs/animate.css';
+// import WowInit from './components/WowAni';
+
 
 const App=()=> {
-  WowAniInit();
+  // WowInit();
   return (
     <AppContainer>
       <ScrollToProject/>

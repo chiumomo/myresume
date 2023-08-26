@@ -112,7 +112,7 @@ const Project = ()=>{
                 </ProjectNav>
                 <Span/>
                 <Routes>
-                    <Route path="/myresume" element={<Cards/>}>
+                    <Route path="/myresume/" element={<Cards/>}>
                     </Route>
                     <Route path="/myresume/UIUX" element={<UIUXCard/>}>
                     </Route>
@@ -124,9 +124,9 @@ const Project = ()=>{
                 <Span/>
                 <ProjectNav>
                     {Data.map((sort,key)=>{
-                        const isCurrentPath = location.pathname === `/${sort.id}`;
+                        const isCurrentPath = location.pathname === `/myresume/${sort.id}`;
                         return(
-                            <Link to={`/${sort.id}`}> 
+                            <Link to={`/myresume/${sort.id}`}> 
                                 <SortButtonBottom  isCurrentPath={isCurrentPath}>
                                     {sort.id}
                                 </SortButtonBottom>
