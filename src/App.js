@@ -9,10 +9,12 @@ import './index.css';
 import Loading from './layout/Loading';
 import {ScrollToProject} from './components/ScrollTo';
 // import WowInit from './components/WowAni';
+import WOW from "wow.js";
 
 
 const App=()=> {
-  // WowInit();
+  // var wow = new WOW;
+  new WOW().init();
   return (
     <AppContainer>
       <ScrollToProject/>
