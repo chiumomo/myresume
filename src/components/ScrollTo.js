@@ -13,20 +13,20 @@ export function pageReload() {
 
         if (navigationType === 'reload') {
     
-        window.location.href = '/myresume/';
+        window.location.href = '/myresume';
             }
     }
-    return null;
+    // return null;
   }
 
 
 //排除了路徑包含['FrontEnd', 'Sticker', 'UIUX']的ScrollToTop
 
 export  function ScrollToProject() {
+  
+  pageReload();
+  
   const { pathname } = useLocation();
-
-    pageReload();
-
     useEffect(() => {
     const includedPaths = ['FrontEnd', 'Sticker', 'UIUX'];
       if (includedPaths.some(path => pathname.includes(path))) { 

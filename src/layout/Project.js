@@ -100,9 +100,9 @@ const Project = ()=>{
             <ProjectContainer>
                 <ProjectNav>
                     {Data.map((sort,key)=>{
-                        const isCurrentPath = location.pathname === `/${sort.id}`;
+                        const isCurrentPath = location.pathname === `/myresume/${sort.id}`;
                         return(
-                            <Link to={`/${sort.id}`}> 
+                            <Link to={`/myresume/${sort.id}`}> 
                                 <SortButton  isCurrentPath={isCurrentPath}>
                                     {sort.id}
                                 </SortButton>
@@ -112,13 +112,13 @@ const Project = ()=>{
                 </ProjectNav>
                 <Span/>
                 <Routes>
-                    <Route path="/myresume/" element={<Cards/>}>
+                    <Route path="/myresume" element={<Cards/>}>
                     </Route>
-                    <Route path="/UIUX" element={<UIUXCard/>}>
+                    <Route path="/myresume/UIUX" element={<UIUXCard/>}>
                     </Route>
-                    <Route path="/FrontEnd" element={<FrontEndCard/>}>
+                    <Route path="/myresume/FrontEnd" element={<FrontEndCard/>}>
                     </Route>
-                    <Route path="/Sticker" element={<StickerCard/>}>
+                    <Route path="/myresume/Sticker" element={<StickerCard/>}>
                     </Route>
                 </Routes>
                 <Span/>
