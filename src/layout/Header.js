@@ -27,6 +27,7 @@ export const Navigation =styled.div`
     width: 100%;
     position: fixed ;
     top: 0;
+    transition: all .3s;
     ul{
         margin: 0 auto ;
         padding: 1rem 0 !important;

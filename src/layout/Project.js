@@ -86,7 +86,6 @@ const SortButtonBottom = styled(SortButton)`
     margin-top: -3rem;
     &::after{
             transform: translate(-16%,-4rem);
-            
         }
 `
 
@@ -99,20 +98,28 @@ const Project = ()=>{
             <Title className={titleWowAniClass}>Projects</Title>
             <ProjectContainer>
                 <ProjectNav>
+                    <Link to={`/myresume/AllProjects`}> 
+                        <SortButton  isCurrentPath={location.pathname === `/myresume/AllProjects`}>
+                                AllProjects
+                        </SortButton>
+                    </Link>
                     {Data.map((sort,key)=>{
                         const isCurrentPath = location.pathname === `/myresume/${sort.id}`;
                         return(
-                            <Link to={`/myresume/${sort.id}`}> 
-                                <SortButton  isCurrentPath={isCurrentPath}>
-                                    {sort.id}
-                                </SortButton>
-                            </Link>
-                        )
+                            
+                                <Link to={`/myresume/${sort.id}`}> 
+                                    <SortButton  isCurrentPath={isCurrentPath}>
+                                        {sort.id}
+                                    </SortButton>
+                                </Link>
+                            )
                     })}
                 </ProjectNav>
                 <Span/>
                 <Routes>
                     <Route path="/myresume/" element={<Cards/>}>
+                    </Route>
+                    <Route path="/myresume/AllProjects" element={<Cards/>}>
                     </Route>
                     <Route path="/myresume/UIUX" element={<UIUXCard/>}>
                     </Route>

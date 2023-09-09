@@ -5,12 +5,12 @@ import { ImgContainer75 } from "../components/ImgContainer";
 import Data from "../data"
 import photos from "../components/PhptoList";
 import { CardContainer, ProjectElement, ProjectText, ProjectTitle } from "../components/CardsStyled";
-import { divWowAniClass } from "../components/WowAni";
+import { slideInLWowAniClass } from "../components/WowAni";
 
 
 const Cards = ()=>{
     return(
-        <CardContainer className={divWowAniClass}>
+        <CardContainer className={slideInLWowAniClass}>
             {Data.map((sort,key) => {
                 return(
                     <div key={key}>
