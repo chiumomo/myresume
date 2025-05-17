@@ -94,23 +94,24 @@ const SkillLeaf=styled.div`
 `
 
 const MovingLeafR = styled(MovingLeaf)`
+    position: relative;
     animation-name:movingR;
     animation-duration: 15s;
 
     @keyframes movingR {
     0% {
-    rotate: -50deg;
-    transform: translate(160%,100%);
+    rotate: -40deg;
+    transform: translate(200%,60%);
     }
     
     65% {
     rotate: -20deg;
-    transform: scaleX(0.7) scaleY(0.4) translate(175%,30%);
+    transform: scaleX(0.7) scaleY(0.4) translate(70%,30%);
     }
     
     100% {
-    rotate: -50deg;
-    transform: translate(160%,100%);
+    rotate: -40deg;
+    transform: translate(200%,60%);
     }
   }
 `
@@ -170,7 +171,7 @@ const Skill =()=>{
             <Title className={titleWowAniClass}>
                 Skills
             </Title>
-            <SkillContainer className={ bounceLWowAniClass}>
+            <SkillContainer className={ bounceLWowAniClass} style={{ marginBottom:'-10px'} }>
                 <SkillsValue>
                     <SkillName>UI</SkillName>
                     <SkillLeaf wid={7} />
