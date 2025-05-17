@@ -49,8 +49,8 @@ let Data = [
                 p1:"Designer：學米導師範例",
                 p2:"Front-end：Cmomo",
                 intro:"Project Intro：練習設計大型資料網頁的資料運用及排版，及router的使用。",
-                link:"https://l6oytw.csb.app/",
-                code:"https://codesandbox.io/s/pratice-useparams-mini2-l6oytw?file=/src/style.js"
+                link:"",
+                code:""
             },
             {
                 id:'FrontEnd/04',
