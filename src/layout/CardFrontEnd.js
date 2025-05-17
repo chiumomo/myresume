@@ -17,6 +17,7 @@ const CodeButton =styled.button`
     margin-top: 1rem;
     font-size: 1rem;
     border: solid 1px  rgba(100,255,255,.4);
+    cursor: pointer;
     &::before{
         content: '';
         position: absolute;
