@@ -10,6 +10,7 @@ import Loading from './layout/Loading';
 import {ScrollToProject} from './components/ScrollTo';
 // import WowInit from './components/WowAni';
 import WOW from "wow.js";
+import React from 'react';
 
 
 const App=()=> {
