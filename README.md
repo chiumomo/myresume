@@ -3,6 +3,7 @@
 ###  js + css 
 ###  use styled component
 ###  npm start
+###  react router ,animate.js
 
 
 

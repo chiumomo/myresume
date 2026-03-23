@@ -17,12 +17,17 @@ const Cards = ()=>{
                         {sort.children.map((product,idx) =>{
                             const photoObj = photos.find((item) => item.id === product.photo);
                             if (!photoObj) return null;
+                            const hasValidLink = product.link.length > 0;
+
                             return(
                                 <ProjectElement key={idx}>
                                 <Row gutter={[40,10]}>
                                     <Col lg={12}  xs={24}>
-                                        <a href={product.link} target="_blank">
-                                            <ImgContainer75 key={idx} url={photoObj.url}>
+                                        <a href={product.link} target="_blank" rel="noreferrer"
+                                        disabled={!hasValidLink}
+                                        >
+                                            <ImgContainer75 
+                                            key={idx} url={photoObj.url}>
                                             </ImgContainer75>  
                                         </a>
                                     </Col>
