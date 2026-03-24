@@ -1,76 +1,71 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
 import { Container } from "../components/Container";
 import styled from "styled-components";
 import "animate.css";
-import { disableScroll } from "../components/ScrollHide";
+import { usePageLoaded } from "../hooks/usePageLoaded";
+
+const TRANSITION_MS = 1000; // 與 CSS transition 時長一致
 
 const LoadingContainer = styled(Container)`
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(210,210,200,1);
-    z-index: ${props => props.isHidden ? '0' : '2'};
+    /* isGone 才真正壓到底層，確保動畫期間仍蓋住內容 */
+    z-index: ${props => props.isGone ? '-1' : '2'};
     justify-content: center;
     align-content: center;
-    transition: transform 1s ease, opacity 1s linear;
-    transform: translateY(${props => props.isHidden ? '-100vh' : '0'});
-    opacity: ${props => props.isHidden ? '0' : '1'};
-    
+    pointer-events: ${props => props.isAnimating ? 'none' : 'auto'};
+    transition: transform ${TRANSITION_MS}ms ease, opacity ${TRANSITION_MS}ms linear;
+    transform: translateY(${props => props.isAnimating ? '-100vh' : '0'});
+    opacity: ${props => props.isAnimating ? '0' : '1'};
+
     h1{
         display: block;
-        align-self:center ;
-        font-family: 'Indie Flower','Noto Sans TC' ,
-    monospace;;
+        align-self: center;
+        font-family: 'Indie Flower', 'Noto Sans TC', monospace;
     }
+`;
 
-`
-// 禁止捲動
-function enableScroll() {
-    const loadingContainer = document.getElementById('LoadingContainer');
-    if (loadingContainer) {
-       loadingContainer.style.overflow = 'auto';
-    }
- }
+const Loading = () => {
+    const isLoaded = usePageLoaded();
+    // 控制動畫開始
+    const [isAnimating, setIsAnimating] = useState(false);
+    // 控制元件真正退場（z-index 降下）
+    const [isGone, setIsGone] = useState(false);
 
-
-const Loading=(()=>{
-    const [isHidden, setIsHidden] = useState(false);
-
+    // 鎖定捲動
     useEffect(() => {
         document.body.style.overflow = 'hidden';
-      const timer = setTimeout(() => {
-        setIsHidden(true);
-      }, 10000);
-
-    return () => {
-        clearTimeout(timer);
-      };
+        return () => { document.body.style.overflow = 'auto'; };
     }, []);
-    
-    if (isHidden){
-        document.body.style.overflow = 'auto';
-    }else{
-        document.body.style.overflow = 'none';
-    };
-      
 
-    return(
-        <div>
-            <LoadingContainer isHidden={isHidden} >
-                <div class="text-container">
-                    <h1 class=" leftRight-moving" >\ Loading /</h1>
-                </div>
-                <div class="spinner">
-                    <div class="cube1"></div>
-                    <div class="cube2"></div>
-                </div>
-            </LoadingContainer>
-                
-        </div>
-    )
-})
+    useEffect(() => {
+        if (!isLoaded) return;
+
+        // 1. 恢復捲動 & 開始播向上 fade-out 動畫
+        document.body.style.overflow = 'auto';
+        setIsAnimating(true);
+
+        // 2. 等動畫跑完再把 z-index 降到 -1
+        const timer = setTimeout(() => setIsGone(true), TRANSITION_MS);
+        return () => clearTimeout(timer);
+    }, [isLoaded]);
+
+    return (
+        <LoadingContainer isAnimating={isAnimating} isGone={isGone}>
+            <div className="text-container">
+                <h1 className="leftRight-moving">\ Loading /</h1>
+            </div>
+            <div className="spinner">
+                <div className="cube1"></div>
+                <div className="cube2"></div>
+            </div>
+        </LoadingContainer>
+    );
+};
 
 export default Loading;
