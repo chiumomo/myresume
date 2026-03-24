@@ -98,9 +98,9 @@ const Project = ()=>{
             <Title className={titleWowAniClass}>Projects</Title>
             <ProjectContainer>
                 <ProjectNav>
-                    <Link to={`/myresume/AllProjects`}> 
-                        <SortButton  isCurrentPath={location.pathname === `/myresume/AllProjects`}>
-                                AllProjects
+                    <Link to={`/myresume/AllProjects`}>
+                        <SortButton  isCurrentPath={[`/myresume/AllProjects`, `/myresume/`, `/myresume`, `/`].includes(location.pathname)}>
+                                All Project
                         </SortButton>
                     </Link>
                     {Data.map((sort,key)=>{
@@ -117,6 +117,10 @@ const Project = ()=>{
                 </ProjectNav>
                 <Span/>
                 <Routes>
+                    <Route path="/" element={<Cards/>}>
+                    </Route>
+                    <Route path="/myresume" element={<Cards/>}>
+                    </Route>
                     <Route path="/myresume/" element={<Cards/>}>
                     </Route>
                     <Route path="/myresume/AllProjects" element={<Cards/>}>
